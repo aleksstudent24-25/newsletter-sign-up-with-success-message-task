@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --darkslate: hsl(234, 29%, 20%);
+  --charcoal: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--charcoal);
+  color: var(--darkslate);
+}
+
+section {
+  min-height: 100vh;
+  align-content: center;
+  justify-items: center;
+}
+
+.container {
+  /* padding: 20px; */
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  min-width: 768px;
+  max-width: 2560px;
+  width: 900px;
+  height: auto;
+  max-height: 100vh;
+  padding: 30px;
+  border-radius: 25px;
+  /* text-align: center; */
+  background-color: var(--white);
+}
+
+.newsletter {
+  /* height: 600px; */
+  /* width: 400px; */
+  letter-spacing: 1px;
+  padding: 30px;
+  padding-right: 60px;
+  justify-items: center;
+  align-content: center;
+}
+
+.title,
+.text,
+.featurelist {
+  padding-bottom: 30px;
+}
+
+.title {
+  font-size: 52px;
+  width: 100%;
+}
+
+li.feature {
+  padding-left: 40px;
+  position: relative;
+  list-style-type: none;
+}
+
+li.feature:before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  width: 18px;
+  height: 18px;
+  background-image: url("./assets/images/icon-list.svg");
+  background-size: cover;
+}
+
+li.feature + li.feature {
+  padding-top: 10px;
+}
+
+.email {
+  width: 100%;
+}
+
+.emailtext {
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.emailinput {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: var(--grey) solid 1px;
+}
+
+.emailerror {
+  /* display: none; */
+  color: var(--tomato);
+}
+
+.submitemail {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 100%;
+  height: 50px;
+  background-color: var(--darkslate);
+  color: var(--white);
+}
+
+.submitemail:hover,
+.emailinput:hover {
+  cursor: pointer;
+}
+
+.submitemail:hover {
+  background-image: linear-gradient(to right, #ff6488,var(--tomato) );
+  box-shadow: 0px 10px 20px 1px var(--tomato);
+}
+
+.signupimg {
+  width: 100%;
+  /* padding: 20px; */
+  /* max-height: 100%; */
+  /* height: auto; */
+}
