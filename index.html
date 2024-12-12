@@ -18,10 +18,16 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="style.css" />
+    <script defer src="./main.js"></script>
   </head>
   <body>
     <section>
-      <div class="container">
+      <div class="container" id="container">
+        <img
+        src="./assets/images/illustration-sign-up-mobile.svg"
+        alt=""
+        class="signupimgmobile"
+      />
         <div class="newsletter">
           <div class="textarea">
             <h2 class="title">Stay updated!</h2>
@@ -39,21 +45,25 @@
           <div action="" class="email">
             <div class="emailtext">
               <p class="emaildesc">Email address</p>
-              <p class="emailerror"></p>
+              <p class="emailerror" id="emailerror"></p>
             </div>
             <input
+              onkeydown="removeError()"
               type="text"
               placeholder="email@company.com"
               class="emailinput"
+              id="emailinput"
             />
-            <button class="submitemail">Subscribe to monthly newsletter</button>
+            <button class="submitemail" onclick="registeremail()">
+              Subscribe to monthly newsletter
+            </button>
           </div>
         </div>
-          <img
-            src="./assets/images/illustration-sign-up-desktop.svg"
-            alt=""
-            class="signupimg"
-          />
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt=""
+          class="signupimg"
+        />
       </div>
     </section>
   </body>

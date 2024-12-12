@@ -21,7 +21,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  height: 100vh;
   align-content: center;
   justify-items: center;
 }
@@ -31,7 +31,6 @@ section {
   display: grid;
   grid-template-columns: 3fr 2fr;
   min-width: 768px;
-  max-width: 2560px;
   width: 900px;
   height: auto;
   max-height: 100vh;
@@ -39,6 +38,16 @@ section {
   border-radius: 25px;
   /* text-align: center; */
   background-color: var(--white);
+}
+
+.approvedcontainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  /* min-width: 768px; */
+  width: 400px;
+  padding: 40px;
+  border-radius: 25px;
 }
 
 .newsletter {
@@ -54,7 +63,7 @@ section {
 .title,
 .text,
 .featurelist {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .title {
@@ -99,11 +108,21 @@ li.feature + li.feature {
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 10px 10px;
-  border: var(--grey) solid 1px;
+  border: var(--grey) solid 2px;
 }
 
 .emailerror {
   /* display: none; */
+  color: var(--tomato);
+}
+
+.inputerror {
+  border-color: var(--tomato);
+  color: var(--tomato);
+  background-color: #ffd4d4;
+}
+
+.inputerror::placeholder {
   color: var(--tomato);
 }
 
@@ -123,7 +142,7 @@ li.feature + li.feature {
 }
 
 .submitemail:hover {
-  background-image: linear-gradient(to right, #ff6488,var(--tomato) );
+  background-image: linear-gradient(to right, #ff6488, var(--tomato));
   box-shadow: 0px 10px 20px 1px var(--tomato);
 }
 
@@ -132,4 +151,77 @@ li.feature + li.feature {
   /* padding: 20px; */
   /* max-height: 100%; */
   /* height: auto; */
+}
+
+.signupimgmobile {
+  display: none;
+}
+
+.successimg {
+  height: 48px;
+  width: 48px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    justify-content: baseline;
+    align-items: baseline;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    min-width: 320px;
+    max-width: 900px;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    /* grid-template-rows: 2fr 3fr;
+    grid-template-columns: 1fr; */
+  }
+
+  .approvedcontainer {
+    justify-content: center;
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .newsletter {
+    height: 100vh;
+    max-width: 100vw;
+  }
+
+  .signupimg {
+    width: 0%;
+    display: none;
+  }
+  .signupimgmobile {
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .textarea {
+    width: 100%;
+  }
+
+  /* .newsletter {
+    padding: 0;
+    width: auto;
+    min-width: 320px;
+  }
+
+  .email {
+    min-width: 320px;
+  }
+
+  .emailtext {
+    max-width: 320px;
+    min-width: 320px;
+  } */
 }
